@@ -115,6 +115,13 @@ class MbsfnFrameProcessor {
     void unlock() { _mutex.unlock(); }
 
     /**
+     *  Lock the processor
+     *
+     *  Used when getting the BLER values.
+     */
+    void lock() { _mutex.lock(); }
+
+    /**
      *  Get the constellation diagram data (I/Q data of the subcarriers after CE)
      */
     const std::vector<uint8_t> mch_data() const;
